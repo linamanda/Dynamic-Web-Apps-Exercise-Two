@@ -4,7 +4,7 @@
 
 Clear App.css\
 Remove logo in source\
-Clean App.js\
+Clean App.js
 
 
 # Getting Started with Create React App
