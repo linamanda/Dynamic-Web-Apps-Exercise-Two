@@ -1,3 +1,12 @@
+# Exercise Two: Weather App
+
+## Cleaning Up Default React App
+
+Clear App.css\
+Remove logo in source\
+Clean App.js\
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
