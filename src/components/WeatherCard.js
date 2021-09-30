@@ -11,27 +11,31 @@ function WeatherCard({
 }) {
   return (
     <section className="WeatherCard">
-      <p>
+      <p className="WeatherType">
         WeatherType: <strong>{weatherType}</strong>
       </p>
-      <p>
-        CurrentTemp: <strong>{currentTemp}</strong>
-      </p>
-      <p>
-        HighTemp: <strong>{highTemp}</strong>
-      </p>
-      <p>
-        LowTemp: <strong>{lowTemp}</strong>
-      </p>
-      <p>
-        Humidity: <strong>{humidity}</strong>
-      </p>
-      <p>
-        windSpeed: <strong>{windSpeed}</strong>
-      </p>
-      <p>
-        Cloudiness: <strong>{cloudiness}</strong>
-      </p>
+      <div className="WeatherTemp">
+        <p>
+          CurrentTemp: <strong>{currentTemp}</strong>
+        </p>
+        <p>
+          HighTemp: <strong>{highTemp}</strong>
+        </p>
+        <p>
+          LowTemp: <strong>{lowTemp}</strong>
+        </p>
+      </div>
+      <div className="WeatherAtmos">
+        <p>
+          Humidity: <strong>{humidity}</strong>
+        </p>
+        <p>
+          WindSpeed: <strong>{windSpeed}</strong>
+        </p>
+        <p>
+          Cloudiness: <strong>{cloudiness}</strong>
+        </p>
+      </div>
     </section>
   );
 }
