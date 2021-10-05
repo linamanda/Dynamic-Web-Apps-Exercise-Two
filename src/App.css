@@ -38,17 +38,17 @@
   padding: 10px 30px;
 }
 
-.WeatherType {
+.WeatherTypeWrapper {
   align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   grid-area: weatherType;
   height: 200px;
   justify-content: center;
   margin: 0;
 }
 
-.WeatherTemp {
+.WeatherTempWrapper {
   display: grid;
   grid-area: weatherTemp;
   grid-template-areas:
@@ -79,10 +79,17 @@
   grid-area: lowTemp;
 }
 
-.WeatherAtmos {
+.WeatherAtmosWrapper {
   display: flex;
   flex-direction: column;
   grid-area: weatherAtmos;
   justify-content: center;
   line-height: 2.5;
+}
+
+.WeatherImageWrapper {
+  align-items: center;
+  display: flex;
+  font-size: 160px;
+  justify-content: center;
 }

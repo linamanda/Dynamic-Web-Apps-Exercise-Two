@@ -45,7 +45,7 @@ function Home() {
     highTemp,
     humidity,
     lowTemp,
-    weatherDescription,
+    // weatherDescription,
     weatherType,
     windSpeed,
   } = useMemo(() => {
@@ -56,7 +56,7 @@ function Home() {
       highTemp: weatherData.main.temp_max,
       humidity: weatherData.main.humidity,
       lowTemp: weatherData.main.temp_min,
-      weatherDescription: weatherData.weather[0].description,
+      //   weatherDescription: weatherData.weather[0].description,
       weatherType: weatherData.weather[0].main,
       windSpeed: weatherData.wind.speed,
     };
@@ -87,7 +87,7 @@ function Home() {
         highTemp={highTemp}
         humidity={humidity}
         lowTemp={lowTemp}
-        weatherDescription={weatherDescription}
+        // weatherDescription={weatherDescription}
         weatherType={weatherType}
         windSpeed={windSpeed}
       />
