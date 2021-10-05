@@ -3,21 +3,41 @@
   padding: 0;
 }
 
+/* Home.js styling */
+
 .App {
   display: grid;
   grid-template-areas:
-    "links links links links links"
+    "nav nav nav nav nav"
     ". . header . ."
     ". . card . .";
   margin: 0 auto;
   row-gap: 50px;
 }
 
-.Links {
+.Navigation {
   display: flex;
-  flex-direction: column;
-  grid-area: links;
-  margin: 10px 20px;
+  flex-direction: row;
+  grid-area: nav;
+}
+
+.Navigation a {
+  color: black;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 0 2px;
+}
+
+.Navigation a:hover {
+  color: gray;
+}
+
+.Navigation a.Active {
+  border-bottom: 2px solid black;
+}
+
+.Navigation a.Active:hover {
+  color: black;
 }
 
 .City {
@@ -25,7 +45,10 @@
   display: flex;
   grid-area: header;
   justify-content: center;
+  text-transform: capitalize;
 }
+
+/* WeatherCard.js styling */
 
 .WeatherCard {
   border: 2px solid black;
@@ -52,8 +75,16 @@
   display: grid;
   grid-area: weatherTemp;
   grid-template-areas:
+    "currentTempTitle currentTempTitle currentTempTitle currentTempTitle"
     ". currentTemp highTemp ."
     ". currentTemp lowTemp .";
+}
+
+.WeatherTempSectionTitle {
+  align-items: center;
+  display: flex;
+  grid-area: currentTempTitle;
+  justify-content: center;
 }
 
 .CurrentTemp {
@@ -86,6 +117,8 @@
   justify-content: center;
   line-height: 2.5;
 }
+
+/* WeatherImage.js styling */
 
 .WeatherImageWrapper {
   align-items: center;
