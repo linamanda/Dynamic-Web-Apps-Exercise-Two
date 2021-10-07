@@ -3,49 +3,78 @@
   padding: 0;
 }
 
+html,
+body {
+  height: 100%;
+  background-color: #e6f1f5;
+}
+
 /* Home.js styling */
 
 .App {
   display: grid;
   grid-template-areas:
     "nav nav nav nav nav"
-    ". . header . ."
-    ". . card . .";
+    ". . title . ."
+    ". . card . ."
+    "mainContent mainContent mainContent mainContent mainContent";
   margin: 0 auto;
+  padding-bottom: 40px;
   row-gap: 50px;
 }
 
-.Navigation {
-  display: flex;
-  flex-direction: row;
+.NavigationWrapper {
   grid-area: nav;
 }
 
+.Navigation {
+  background-color: black;
+  padding: 10px 0;
+}
+
 .Navigation a {
-  color: black;
   text-decoration: none;
   margin: 0 10px;
   padding: 0 2px;
 }
 
-.Navigation a:hover {
+.Navigation a:first-child {
+  border-right: 1px solid white;
+  color: #0282de;
+  font-weight: bold;
+  padding-right: 20px;
+}
+
+.Navigation a:not(:first-child) {
+  color: white;
+}
+
+.Navigation a:not(:first-child):hover {
   color: gray;
 }
 
 .Navigation a.Active {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid white;
+  font-weight: bold;
 }
 
 .Navigation a.Active:hover {
-  color: black;
+  color: white;
 }
 
 .City {
   align-items: center;
   display: flex;
-  grid-area: header;
+  grid-area: title;
   justify-content: center;
   text-transform: capitalize;
+}
+
+.MainContentWrapper {
+  align-items: center;
+  display: flex;
+  grid-area: mainContent;
+  justify-content: center;
 }
 
 /* WeatherCard.js styling */
@@ -56,8 +85,9 @@
   display: grid;
   grid-area: card;
   grid-template-areas:
-    "weatherTemp weatherTemp"
-    "weatherType weatherAtmos";
+    "weatherTemp"
+    "weatherType"
+    "weatherAtmos";
   padding: 10px 30px;
 }
 
@@ -69,22 +99,15 @@
   height: 200px;
   justify-content: center;
   margin: 0;
+  padding: 10px 20px 40px 10px;
 }
 
 .WeatherTempWrapper {
   display: grid;
   grid-area: weatherTemp;
   grid-template-areas:
-    "currentTempTitle currentTempTitle currentTempTitle currentTempTitle"
     ". currentTemp highTemp ."
     ". currentTemp lowTemp .";
-}
-
-.WeatherTempSectionTitle {
-  align-items: center;
-  display: flex;
-  grid-area: currentTempTitle;
-  justify-content: center;
 }
 
 .CurrentTemp {
@@ -116,6 +139,8 @@
   grid-area: weatherAtmos;
   justify-content: center;
   line-height: 2.5;
+  margin-left: 15%;
+  padding: 10px 20px;
 }
 
 /* WeatherImage.js styling */
@@ -125,4 +150,20 @@
   display: flex;
   font-size: 160px;
   justify-content: center;
+}
+
+@media (min-width: 800px) {
+  .City {
+    font-size: 3em;
+  }
+
+  .WeatherAtmosWrapper {
+    margin: 0;
+  }
+
+  .WeatherCard {
+    grid-template-areas:
+      "weatherTemp weatherTemp"
+      "weatherType weatherAtmos";
+  }
 }

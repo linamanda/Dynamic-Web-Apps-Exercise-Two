@@ -12,9 +12,13 @@ function WeatherCard({
   windSpeed,
 }) {
   return (
-    <section className="WeatherCard">
+    <section
+      className="WeatherCard"
+      style={{
+        backgroundColor: `rgba(150, 150, 150, ${cloudiness / 100})`,
+      }}
+    >
       <div className="WeatherTempWrapper">
-        <p className="WeatherTempSectionTitle">Current Temperature</p>
         <p className="CurrentTemp">
           <strong>
             {currentTemp}

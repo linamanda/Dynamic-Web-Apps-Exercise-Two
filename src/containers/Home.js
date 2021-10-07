@@ -62,33 +62,44 @@ function Home() {
 
   return (
     <main className="App">
-      <nav className="Navigation">
-        <a href="/?city=paris" className={city === "paris" && "Active"}>
-          Paris
-        </a>
-        <a href="/?city=tokyo" className={city === "tokyo" && "Active"}>
-          Tokyo
-        </a>
-        <a href="/?city=seoul" className={city === "seoul" && "Active"}>
-          Seoul
-        </a>
-        <a href="/?city=seattle" className={city === "seattle" && "Active"}>
-          Seattle
-        </a>
-      </nav>
+      <header className="NavigationWrapper">
+        <nav className="Navigation">
+          <a href="/" className="logo">
+            WeatherNow
+          </a>
+          <a href="/?city=paris" className={city === "paris" && "Active"}>
+            Paris
+          </a>
+          <a href="/?city=tokyo" className={city === "tokyo" && "Active"}>
+            Tokyo
+          </a>
+          <a href="/?city=seoul" className={city === "seoul" && "Active"}>
+            Seoul
+          </a>
+          <a href="/?city=seattle" className={city === "seattle" && "Active"}>
+            Seattle
+          </a>
+        </nav>
+      </header>
 
       <h1 className="City"> {city} </h1>
 
-      <WeatherCard
-        cloudiness={cloudiness}
-        currentTemp={currentTemp}
-        highTemp={highTemp}
-        humidity={humidity}
-        lowTemp={lowTemp}
-        tempUnit={tempUnitStr}
-        weatherType={weatherType}
-        windSpeed={windSpeed}
-      />
+      {(city && (
+        <WeatherCard
+          cloudiness={cloudiness}
+          currentTemp={currentTemp}
+          highTemp={highTemp}
+          humidity={humidity}
+          lowTemp={lowTemp}
+          tempUnit={tempUnitStr}
+          weatherType={weatherType}
+          windSpeed={windSpeed}
+        />
+      )) || (
+        <section className="MainContentWrapper">
+          <p>Select a city to view the current weather.</p>
+        </section>
+      )}
     </main>
   );
 }
