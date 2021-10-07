@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Dynamic-Web-Apps-Exercise-Two/static/css/main.3b00bfa3.chunk.css",
+    "main.js": "/Dynamic-Web-Apps-Exercise-Two/static/js/main.ebd27f39.chunk.js",
+    "main.js.map": "/Dynamic-Web-Apps-Exercise-Two/static/js/main.ebd27f39.chunk.js.map",
+    "runtime-main.js": "/Dynamic-Web-Apps-Exercise-Two/static/js/runtime-main.646951e3.js",
+    "runtime-main.js.map": "/Dynamic-Web-Apps-Exercise-Two/static/js/runtime-main.646951e3.js.map",
+    "static/js/2.93c04f03.chunk.js": "/Dynamic-Web-Apps-Exercise-Two/static/js/2.93c04f03.chunk.js",
+    "static/js/2.93c04f03.chunk.js.map": "/Dynamic-Web-Apps-Exercise-Two/static/js/2.93c04f03.chunk.js.map",
+    "static/js/3.b272892f.chunk.js": "/Dynamic-Web-Apps-Exercise-Two/static/js/3.b272892f.chunk.js",
+    "static/js/3.b272892f.chunk.js.map": "/Dynamic-Web-Apps-Exercise-Two/static/js/3.b272892f.chunk.js.map",
+    "index.html": "/Dynamic-Web-Apps-Exercise-Two/index.html",
+    "static/css/main.3b00bfa3.chunk.css.map": "/Dynamic-Web-Apps-Exercise-Two/static/css/main.3b00bfa3.chunk.css.map",
+    "static/js/2.93c04f03.chunk.js.LICENSE.txt": "/Dynamic-Web-Apps-Exercise-Two/static/js/2.93c04f03.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.646951e3.js",
+    "static/js/2.93c04f03.chunk.js",
+    "static/css/main.3b00bfa3.chunk.css",
+    "static/js/main.ebd27f39.chunk.js"
+  ]
+}
