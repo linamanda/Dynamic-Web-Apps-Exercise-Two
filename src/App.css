@@ -6,7 +6,6 @@
 html,
 body {
   height: 100%;
-  background-color: #e6f1f5;
 }
 
 /* Home.js styling */
@@ -17,7 +16,7 @@ body {
     "nav nav nav nav nav"
     ". . title . ."
     ". . card . ."
-    "mainContent mainContent mainContent mainContent mainContent";
+    ". mainContent mainContent mainContent .";
   margin: 0 auto;
   padding-bottom: 40px;
   row-gap: 50px;
